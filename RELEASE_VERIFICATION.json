@@ -1,0 +1,19 @@
+{
+  "schema": "invariant.software_release_verification.v1",
+  "runtime_status": "PASS",
+  "scope": "Recovered ICL-Core 0.1.0/R1 language and toolchain; not a trained ICL-Native model or a later R2/R3 release.",
+  "checked_in": "isolated Linux container; Python 3.13.5 / Node 22.16.0 / Chromium 144 where applicable",
+  "actual_server_tested": false,
+  "actual_windows_tested": false,
+  "hosted_platform_tested": false,
+  "public_release_performed": false,
+  "public_rights_approved": false,
+  "target_codes": [
+    "G11",
+    "G12",
+    "G17",
+    "G18"
+  ],
+  "source_class": "archived_source",
+  "evidence_file_in_delivery_audit": "original_github_final_results.json"
+}

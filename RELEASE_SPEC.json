@@ -1,0 +1,42 @@
+{
+  "repo": "icl-core",
+  "codes": [
+    "OCIL-LANG-01",
+    "G11",
+    "G12",
+    "G17",
+    "G18"
+  ],
+  "commands": [
+    [
+      "python",
+      "tests/run_acceptance.py"
+    ],
+    [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_vm_replay.py",
+      "-v"
+    ]
+  ],
+  "check_cwd": ".",
+  "scope": "Recovered ICL-Core 0.1.0/R1 language and toolchain; not a trained ICL-Native model or a later R2/R3 release.",
+  "status": "LOCAL_CHECKS_PASS_OWNER_GATES_OPEN",
+  "source_unchanged": true,
+  "owner_approval_required": true,
+  "public_uploaded": false,
+  "source_reference": "See private release registry; source hashes retained.",
+  "last_check": {
+    "repo": "icl-core",
+    "passed": true,
+    "scope": "Recovered ICL-Core 0.1.0/R1 language and toolchain; not a trained ICL-Native model or a later R2/R3 release.",
+    "commands": 2,
+    "readiness": "LOCAL_CHECKS_PASS_OWNER_GATES_OPEN",
+    "reason": "Declared local checks passed; scientific, rights and deployment scope remain limited."
+  }
+}

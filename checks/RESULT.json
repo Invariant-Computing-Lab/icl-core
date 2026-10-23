@@ -1,0 +1,37 @@
+{
+  "repo": "icl-core",
+  "recovery": "CP03R1",
+  "tests_executed": 2,
+  "passed": true,
+  "scope": "Recovered ICL-Core 0.1.0/R1 language and toolchain; not a trained ICL-Native model or a later R2/R3 release.",
+  "commands": [
+    {
+      "command": [
+        "python",
+        "tests/run_acceptance.py"
+      ],
+      "exit_code": 0,
+      "seconds": 18.327,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"test_protocol\": \"ICL_ACCEPTANCE_v0.1\",\n  \"tolerance_fixed_before_run\": {\n    \"atol\": 1e-10,\n    \"rtol\": 1e-10\n  },\n  \"seed\": 29475038,\n  \"handwritten\": {\n    \"total\": 77,\n    \"passed\": 77,\n    \"failed\": 0,\n    \"families\": {\n      \"scalar\": 1,\n      \"arithmetic\": 3,\n      \"boolean\": 6,\n      \"float\": 2,\n      \"string\": 2,\n      \"scope\": 5,\n      \"branch\": 4,\n      \"loop\": 3,\n      \"function\": 4,\n      \"list\": 2,\n      \"tuple\": 1,\n      \"record\": 3,\n      \"name\": 2,\n      \"type\": 7,\n      \"numeric\": 3,\n      \"bounds\": 1,\n      \"parse\": 1,\n      \"lex\": 1,\n      \"module\": 1,\n      \"option\": 2,\n      \"result\": 2,\n      \"observer\": 7,\n      \"recovery\": 4,\n      \"effect\": 3,\n      \"tensor\": 4,\n      \"approx\": 1,\n      \"identifiability\": 2\n    },\n    \"failures\": []\n  },\n  \"generated\": {\n    \"total\": 1008,\n    \"passed\": 1008,\n    \"failed\": 0,\n    \"families\": {\n      \"integer_expression\": 85,\n      \"conditional_parameter\": 85,\n      \"bounded_loop\": 85,\n      \"function_composition\": 85,\n      \"list_index_length\": 85,\n      \"record_projection\": 85,\n      \"tuple_projection\": 85,\n      \"boolean_precedence\": 85,\n      \"float_division\": 85,\n      \"branch_mutation\": 85,\n      \"recursive_function\": 73,\n      \"mixed_record_call\": 85\n    },\n    \"failures\": []\n  },\n  \"adversarial\": {\n    \"total\": 39,\n    \"passed\": 39,\n    \"failed\": 0,\n    \"families\": {\n      \"type\": 4,\n      \"authority\": 3,\n      \"provenance\": 1,\n      \"observer\": 4,\n      \"recovery\": 3,\n      \"domain\": 2,\n      \"numeric\": 3,\n      \"bounds\": 2,\n      \"resource\": 7,\n      \"shape\": 2,\n      \"lexer\": 2,\n      \"parser\": 1,\n      \"isolation\": 2,\n      \"import\": 3\n    },\n    \"failures\": []\n  },\n  \"numpy_graphs\": {\n    \"total\": 8,\n    \"passed\": 8,\n    \"failed\": 0,\n    \"families\": {\n      \"numpy_forward\": 8\n    },\n    \"failures\": []\n  },\n  \"contracts\": {\n    \"total\": 30,\n    \"passed\": 30,\n    \"failed\": 0,\n    \"families\": {\n      \"replay\": 4,\n      \"adversarial\": 17,\n      \"serialization\": 4,\n      \"authority\": 1,\n      \"trace\": 2,\n      \"recovery\": 1,\n      \"diagnostics\": 1\n    },\n    \"failures\": []\n  },\n  \"cli\": {\n    \"total\": 19,\n    \"passed\": 19,\n    \"failed\": 0,\n    \"families\": {\n      \"cli\": 19\n    },\n    \"failures\": []\n  },\n  \"elapsed_seconds\": 17.305298566818237,\n  \"execution_engines\": \"independent tree control flow and bytecode VM; shared scalar/builtin primitives are documented\",\n  \"source_changed_during_run\": [],\n  \"unique_generated_source_argument_cases\": 1008\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_vm_replay.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 1.988,
+      "stdout": "",
+      "stderr": "test_authorized_policy_must_be_independently_supplied_on_replay (test_vm_replay.VMReplayTests.test_authorized_policy_must_be_independently_supplied_on_replay) ... ok\ntest_bad_opcodes_and_operators_fail_closed (test_vm_replay.VMReplayTests.test_bad_opcodes_and_operators_fail_closed) ... ok\ntest_call_stack_limit_does_not_limit_lexical_scopes (test_vm_replay.VMReplayTests.test_call_stack_limit_does_not_limit_lexical_scopes) ... ok\ntest_every_instruction_boundary_replays_with_identical_state_trace (test_vm_replay.VMReplayTests.test_every_instruction_boundary_replays_with_identical_state_trace) ... ok\ntest_operand_types_are_checked_without_host_exception (test_vm_replay.VMReplayTests.test_operand_types_are_checked_without_host_exception) ... ok\ntest_recomputed_checkpoint_checksum_cannot_supply_authority (test_vm_replay.VMReplayTests.test_recomputed_checkpoint_checksum_cannot_supply_authority) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 1.094s\n\nOK\n"
+    }
+  ],
+  "generated_result_hashes": {}
+}
